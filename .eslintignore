@@ -1,0 +1,14 @@
+# Build artefacts
+/build/*
+/coverage/*
+
+# Data definition files
+**/*.d.ts
+
+# Custom Global Files
+
+# Custom Files
+/src/services/serviceWorker.ts
+
+# Styles
+/src/styles/scss/*
