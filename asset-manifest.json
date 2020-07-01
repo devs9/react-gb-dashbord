@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/react-gb-dashbord/static/css/main.d52f70dc.chunk.css",
-    "main.js": "/react-gb-dashbord/static/js/main.342fa106.chunk.js",
-    "runtime-main.js": "/react-gb-dashbord/static/js/runtime-main.7c991e7d.js",
-    "static/css/2.5e04faac.chunk.css": "/react-gb-dashbord/static/css/2.5e04faac.chunk.css",
-    "static/js/2.d5c25ab2.chunk.js": "/react-gb-dashbord/static/js/2.d5c25ab2.chunk.js",
-    "index.html": "/react-gb-dashbord/index.html",
-    "precache-manifest.a8ee3b987050745b84eed1847c81c66d.js": "/react-gb-dashbord/precache-manifest.a8ee3b987050745b84eed1847c81c66d.js",
-    "service-worker.js": "/react-gb-dashbord/service-worker.js",
-    "static/js/2.d5c25ab2.chunk.js.LICENSE.txt": "/react-gb-dashbord/static/js/2.d5c25ab2.chunk.js.LICENSE.txt"
+    "main.css": "/cra-gpages-actions/static/css/main.d52f70dc.chunk.css",
+    "main.js": "/cra-gpages-actions/static/js/main.886b4aae.chunk.js",
+    "runtime-main.js": "/cra-gpages-actions/static/js/runtime-main.cadc289f.js",
+    "static/css/2.5e04faac.chunk.css": "/cra-gpages-actions/static/css/2.5e04faac.chunk.css",
+    "static/js/2.48d7c4da.chunk.js": "/cra-gpages-actions/static/js/2.48d7c4da.chunk.js",
+    "index.html": "/cra-gpages-actions/index.html",
+    "precache-manifest.b786b1e0169c5215fbe21727df8c1ded.js": "/cra-gpages-actions/precache-manifest.b786b1e0169c5215fbe21727df8c1ded.js",
+    "service-worker.js": "/cra-gpages-actions/service-worker.js",
+    "static/js/2.48d7c4da.chunk.js.LICENSE.txt": "/cra-gpages-actions/static/js/2.48d7c4da.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.7c991e7d.js",
+    "static/js/runtime-main.cadc289f.js",
     "static/css/2.5e04faac.chunk.css",
-    "static/js/2.d5c25ab2.chunk.js",
+    "static/js/2.48d7c4da.chunk.js",
     "static/css/main.d52f70dc.chunk.css",
-    "static/js/main.342fa106.chunk.js"
+    "static/js/main.886b4aae.chunk.js"
   ]
 }
