@@ -4,8 +4,9 @@ import Typography from '@material-ui/core/Typography'
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined'
 
 import {useFormHeaderStyle} from './styles'
+import {IFormHeader} from './ts'
 
-const FormHeader: FC<{isSignIn: boolean}> = ({isSignIn}) => {
+const FormHeader: FC<IFormHeader> = ({isSignIn}) => {
   const classes = useFormHeaderStyle()
 
   return (

@@ -7,11 +7,13 @@ import {IForm} from './ts'
 const Form: FC<IForm> = ({isSignIn, handleSubmit, children}) => {
   const classes = useFormStyle()
 
+  const submitText = isSignIn ? 'Войти' : 'Зарегистрироваться'
+
   return (
     <form className={classes.root} noValidate autoComplete="off">
       {children}
       <Button fullWidth type="submit" color="primary" variant="contained" onClick={handleSubmit}>
-        {isSignIn ? 'Войти' : 'Зарегистрироваться'}
+        {submitText}
       </Button>
     </form>
   )

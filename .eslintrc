@@ -14,6 +14,7 @@
   ],
   "extends": [
     "eslint:recommended",
+    "airbnb-typescript/base",
     "plugin:import/typescript",
     "plugin:react/recommended",
     "plugin:sonarjs/recommended",
@@ -39,15 +40,20 @@
     //    Base rules
     "semi": ["error", "never"],
     //    react rules
-    "react/prop-types": 0,
+    "react/prop-types": "off",
+    //    import rules
+    "import/prefer-default-export": "off",
     //    react-hooks rules
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
+    //    rest rules
+    "consistent-return": "off",
     //    @typescript-eslint rules
     "@typescript-eslint/no-explicit-any": 1,
     "@typescript-eslint/camelcase": "off",
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/naming-convention": "off",
     "@typescript-eslint/no-empty-interface": "off",
     "@typescript-eslint/no-use-before-define": "off",
     "@typescript-eslint/interface-name-prefix": "off",

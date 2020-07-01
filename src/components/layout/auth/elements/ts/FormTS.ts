@@ -1,11 +1,13 @@
 import {MouseEvent} from 'react'
 
-export interface IForm {
-  isSignIn: boolean
+type IsSignInT = {isSignIn: boolean}
+
+export interface IFormHeader extends IsSignInT {}
+
+export interface IForm extends IsSignInT {
   handleSubmit: (event: MouseEvent<HTMLButtonElement>) => void
 }
 
-export interface IFormFooter {
-  isSignIn: boolean
+export interface IFormFooter extends IsSignInT {
   to: string
 }

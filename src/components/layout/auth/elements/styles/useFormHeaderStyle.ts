@@ -2,7 +2,7 @@ import {makeStyles, Theme} from '@material-ui/core/styles'
 
 export const useFormHeaderStyle = makeStyles(({spacing, palette}: Theme) => ({
   root: {
-    bottom: 60,
+    bottom: 25,
     width: '80%',
     display: 'flex',
     borderRadius: 4,
@@ -14,6 +14,6 @@ export const useFormHeaderStyle = makeStyles(({spacing, palette}: Theme) => ({
   },
   avatar: {
     margin: spacing(1),
-    backgroundColor: `${palette.error.light} !important`
+    backgroundColor: `${palette.success.dark} !important`
   }
 }))

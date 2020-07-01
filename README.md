@@ -18,7 +18,7 @@
   </a>
   <!-- Build Status -->
   <a href="https://travis-ci.org/devs9/react-gb-dashbord">
-    <img src="https://travis-ci.org/react-boilerplate/react-boilerplate.svg" alt="Build Status" />
+    <img src="https://travis-ci.org/devs9/react-gb-dashbord.svg?branch=master" alt="Build Status" />
   </a>
 </div>
 
@@ -29,15 +29,11 @@
 
 ## Features
 
-* ####TypeScript
-* ####React Hooks
-* ####Redux-Saga + Redux-Thunk + Typesafe Actions 
-  (completely typesafe Reducers + ActionCreator + Stores)
+#### React + TypeScript
+#### Redux-Saga + Redux-Thunk + Typesafe Actions      
+#### Styled Components + Styled Breakpoints + Material UI styles
+#### ESLint + Prettier for syntax check
 
-* ####ESLint + Prettier for syntax check
-
-* ####Styled Components + Styled Breakpoints + Material UI styles
-<br />
 
 ## Quick start
 
@@ -45,25 +41,30 @@
 2.  Move to the appropriate directory: `cd <YOUR_PROJECT_NAME>`.<br />
 3.  Run `npm run install or yarn` for install dependencies.<br /> 
     _At this point you can run `npm start or yarn start` to see the example app at `http://localhost:3000`._
-
-<br />
+    
 
 ## Optimization and Bundle Analysis
 
-* ####Why-did-you-render connected
+#### Why-did-you-render connected
   Notify you about avoidable re-renders. For example, when you pass `style={{width: '100%'}}` to a big pure component and make it always re-render:
-  
-  <br />    
   <img src="https://github.com/welldone-software/why-did-you-render/raw/master/images/demo.png" width="666" />
 
-* ####Analyzes React bundles 
+#### Analyzes React bundles 
   The tool is to help you understand what your bundle looks like and what is included in your bundle.
-  
-  <br />    
   <img src="https://www.dropbox.com/s/zun4n4tgp059neh/bundle-analysis.png?raw=1" height=50% width="666" />
 
-<br />
 
+
+## Env
+
+##### Auth
+   * REACT_APP_GOOGLE_CLIENT_ID ! *** (`Google developers console`)
+   * REACT_APP_FACEBOOK_APP_ID ! *** (`Facebook developers console`)
+
+##### Deploy
+   * ACTIONS_DEPLOY_KEY ! *** (`Github settings repo`)
+
+<br />
 
 ## Scripts
 * For run analyzes

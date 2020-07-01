@@ -2,18 +2,19 @@ import {makeStyles, Theme} from '@material-ui/core/styles'
 
 export const useSocialIconsStyle = makeStyles(({transitions}: Theme) => ({
   root: {
-    marginTop: -35,
+    height: 50,
+    width: '60%',
+    // marginTop: -25,
     display: 'flex',
-    paddingBottom: 45,
-    position: 'relative',
-    justifyContent: 'center',
+    // paddingBottom: 15,
+    // position: 'relative',
+    justifyContent: 'space-evenly',
     '& img': {
       width: 33,
-      position: 'absolute',
       '&:hover': {
-        width: 44,
         cursor: 'pointer',
-        transition: transitions.create('width', {
+        transform: 'scale(1.4)',
+        transition: transitions.create('transform', {
           easing: transitions.easing.easeIn,
           duration: transitions.duration.short
         })
@@ -21,3 +22,5 @@ export const useSocialIconsStyle = makeStyles(({transitions}: Theme) => ({
     }
   }
 }))
+
+// position: 'absolute',

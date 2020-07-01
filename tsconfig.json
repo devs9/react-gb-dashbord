@@ -5,6 +5,11 @@
       "ES2017",
       "DOM"
     ],
+    "types": [
+      "gapi",
+      "gapi.auth2",
+      "facebook-js-sdk"
+    ],
     "noEmit": true,
     "strict": true,
     "allowJs": true,

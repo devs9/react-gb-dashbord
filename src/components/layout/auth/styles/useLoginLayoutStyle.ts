@@ -1,15 +1,11 @@
 import {makeStyles, Theme} from '@material-ui/core/styles'
 
-export const useLoginLayoutStyle = makeStyles(({transitions, palette, spacing}: Theme) => ({
+export const useLoginLayoutStyle = makeStyles(({transitions, spacing}: Theme) => ({
   root: {
-    height: '100vh',
-    backgroundSize: 'cover',
-    backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/githubBg.jpg)`
-  },
-  form: {
     top: 100,
-    opacity: 0.95,
+    opacity: 0.9,
     position: 'relative',
+    marginBottom: spacing(7),
     transition: transitions.create(['opacity', 'top'], {
       easing: transitions.easing.sharp,
       duration: transitions.duration.enteringScreen
@@ -19,8 +15,7 @@ export const useLoginLayoutStyle = makeStyles(({transitions, palette, spacing}: 
     display: 'flex',
     alignItems: 'center',
     flexDirection: 'column',
-    paddingTop: spacing(2),
-    backgroundColor: palette.background.paper
+    marginBottom: spacing(9)
   },
   formHidden: {
     top: 0,

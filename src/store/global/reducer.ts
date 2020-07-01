@@ -1,7 +1,7 @@
-import {createReducer} from 'typesafe-actions'
+import {ActionType, createReducer} from 'typesafe-actions'
 
 import * as Actions from './actions'
-import {IGlobalStore, GlobalActionsT} from '../../interfaces/Store'
+import {IGlobalStore} from './ts'
 
 export const initialState: IGlobalStore = {
   isAuth: false,
@@ -12,7 +12,7 @@ export const initialState: IGlobalStore = {
   }
 }
 
-const globalReducer = createReducer<IGlobalStore, GlobalActionsT>(initialState)
+const globalReducer = createReducer<IGlobalStore, ActionType<typeof Actions>>(initialState)
   .handleAction(Actions.authStart, (state, _) => ({...state, isFetch: true}))
   .handleAction(Actions.authLogout, (state, _) => initialState)
   .handleAction(Actions.authFailure, (state, action) => {
@@ -30,41 +30,4 @@ const globalReducer = createReducer<IGlobalStore, GlobalActionsT>(initialState)
     }
   })
 
-//
-
-//
-//
-//
-// export const $globalReducer: Reducer<IGlobalStore> = (state = initialState, action) => {
-//   switch (action.type) {
-//     case globalTypes.start: {
-//       return {...state, isFetch: true}
-//     }
-//
-//     case globalTypes.logout: {
-//       return initialState
-//     }
-//
-//     case globalTypes.success: {
-//       return {
-//         isAuth: true,
-//         isFetch: false,
-//         ...action.payload
-//       }
-//     }
-//
-//     case globalTypes.failure: {
-//       return {
-//         ...state,
-//         isAuth: false,
-//         isFetch: false,
-//         errors: action.payload
-//       }
-//     }
-//
-//     default: {
-//       return state
-//     }
-//   }
-// }
 export default globalReducer

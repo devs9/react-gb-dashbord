@@ -2,7 +2,7 @@ import React from 'react'
 import {render} from 'react-dom'
 import {Provider} from 'react-redux'
 import {ThemeProvider} from 'styled-components'
-import {ThemeProvider as MuiProvider} from '@material-ui/styles'
+import {ThemeProvider as MuiProvider} from '@material-ui/core/styles'
 
 import store from './store'
 import {HotApp} from './app'

@@ -1,3 +1,5 @@
+import {fbID, googleID} from '../constants'
+
 const addScript = (id: string, src: string) =>
   new Promise((resolve, reject) => {
     const element = document.getElementById(id)
@@ -20,21 +22,38 @@ const addScript = (id: string, src: string) =>
  * Socials auth script
  */
 export const addGoogleScript = async () => {
-  const id = 'googleAuth'
-  const src = '//apis.google.com/js/client:platform.js'
+  try {
+    const id = 'googleAuth'
+    const src = '//apis.google.com/js/client:platform.js'
 
-  await addScript(id, src)
+    await addScript(id, src)
 
-  gapi.load('auth2', () => {
-    if (!gapi.auth2.getAuthInstance()) {
-      gapi.auth2.init({client_id: process.env.REACT_APP_GOOGLE_CLIENT_ID})
-    }
-  })
+    gapi.load('auth2', () => {
+      if (!gapi.auth2.getAuthInstance()) {
+        gapi.auth2.init({client_id: googleID})
+      }
+    })
+  } catch (error) {
+    console.error(error)
+  }
 }
 
-// export const addFacebookScript = async () => {
-//   const id = 'facebookAuth'
-//   const src = 'https://connect.facebook.net/en_US/sdk.js'
+export const addFacebookScript = async () => {
+  try {
+    const id = 'facebookAuth'
+    const src = 'https://connect.facebook.net/en_US/sdk.js'
+    const params = {appId: fbID, version: 'v3.3', cookie: true, xfbml: true, status: true}
+
+    await addScript(id, src)
+    await FB.init(params)
+  } catch (error) {
+    console.error(error.name, ':', error.message)
+  }
+}
+
+// export const addLinkedInScript = async () => {
+//   const id = 'linkedinAuth'
+//   const src = '//platform.linkedin.com/in.js?async=true'
 //
 //   return await addScript(id, src)
 // }

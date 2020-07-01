@@ -5,7 +5,7 @@ import thunk from 'redux-thunk'
 
 import rootSaga from './rootSaga'
 import rootReducer from './rootReducer'
-import {IStore} from '../interfaces/Store'
+import {IStore} from './ts'
 
 function configureStore(): Store<IStore> {
   const sagaMiddleware = createSagaMiddleware()

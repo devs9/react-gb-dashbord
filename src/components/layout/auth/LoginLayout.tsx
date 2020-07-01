@@ -11,18 +11,16 @@ const LoginLayout: FC = ({children}) => {
 
   useEffect(() => {
     setTimeout(() => {
-      setFormAnimation(classes.form)
+      setFormAnimation(classes.root)
     }, 200)
-  }, [classes.form])
+  }, [classes.root])
 
   return (
-    <div className={classes.root}>
+    <Container component="main" maxWidth="xs">
       <div className={formAnimation}>
-        <Container component="main" maxWidth="xs">
-          <Paper className={classes.paper}>{children}</Paper>
-        </Container>
+        <Paper className={classes.paper}>{children}</Paper>
       </div>
-    </div>
+    </Container>
   )
 }
 

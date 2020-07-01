@@ -8,12 +8,10 @@ import RootRouter from '../router'
 
 const App: FC = () => {
   return (
-    <div>
-      <BrowserRouter basename={basename}>
-        <RootRouter />
-        <ToastContainer newestOnTop hideProgressBar autoClose={3000} transition={Flip} />
-      </BrowserRouter>
-    </div>
+    <BrowserRouter basename={basename}>
+      <RootRouter />
+      <ToastContainer newestOnTop hideProgressBar autoClose={3000} transition={Flip} />
+    </BrowserRouter>
   )
 }
 

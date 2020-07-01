@@ -1,8 +1,8 @@
 import React, {FC, memo} from 'react'
 import {useDispatch} from 'react-redux'
 
-import {googleSvg} from '../../../../constants'
-import {googleAuthSaga} from '../../../../store/global'
+import {googleSvg, fbSvg} from '../../../../constants'
+import {googleAuthSaga, fbAuthSaga} from '../../../../store/global'
 
 import {useSocialIconsStyle} from './styles'
 
@@ -13,10 +13,14 @@ const SocialIcons: FC = () => {
   const handleGoogleAuth = () => {
     dispatch(googleAuthSaga())
   }
+  const handleFbAuth = async () => {
+    dispatch(fbAuthSaga())
+  }
 
   return (
     <div className={classes.root}>
-      <img alt="google auth" src={googleSvg} onClick={handleGoogleAuth} />
+      <img alt="fb-auth" src={fbSvg} onClick={handleFbAuth} />
+      <img alt="google-auth" src={googleSvg} onClick={handleGoogleAuth} />
     </div>
   )
 }

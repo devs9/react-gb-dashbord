@@ -1,4 +1,8 @@
-export const regState = {
-  name: '',
-  password: ''
+export const registrationState = {
+  email: '',
+  login: '',
+  firstName: '',
+  lastName: '',
+  password: '',
+  repeatPassword: ''
 }

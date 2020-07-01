@@ -1,12 +1,14 @@
-import React, {FC, MouseEvent, ChangeEvent, useState, useEffect, useCallback} from 'react'
+import React, {FC, MouseEvent, ChangeEvent, useState, useCallback, useMemo} from 'react'
 
-import {loginState, loginOptions} from './config'
-import {addGoogleScript} from '../../utils'
+import {useSocialScript} from '../../hooks'
+import {loginState, fieldDefaultProps} from './config'
 
-import {InputWithIcon} from '../../components/atoms'
+import {InputBase} from '../../components/core'
 import LoginLayout, {Form, SocialIcons, FormHeader, FormFooter} from '../../components/layout/auth'
 
 const Login: FC = () => {
+  useSocialScript()
+
   const [signInValues, setSignInValues] = useState(loginState)
 
   const handleChangeField = useCallback((event: ChangeEvent<HTMLInputElement>) => {
@@ -15,7 +17,6 @@ const Login: FC = () => {
 
     setSignInValues((prevState) => ({...prevState, [name]: value}))
   }, [])
-
   const handleSubmit = useCallback(
     (event: MouseEvent<HTMLButtonElement>) => {
       event.preventDefault()
@@ -25,9 +26,20 @@ const Login: FC = () => {
     [signInValues]
   )
 
-  useEffect(() => {
-    addGoogleScript()
-  }, [])
+  const loginProps = useMemo(() => {
+    return {
+      ...fieldDefaultProps.loginOptions,
+      value: signInValues.login,
+      onChange: handleChangeField
+    }
+  }, [handleChangeField, signInValues.login])
+  const pswProps = useMemo(() => {
+    return {
+      ...fieldDefaultProps.pswOptions,
+      value: signInValues.password,
+      onChange: handleChangeField
+    }
+  }, [handleChangeField, signInValues.password])
 
   return (
     <LoginLayout>
@@ -35,16 +47,8 @@ const Login: FC = () => {
       <SocialIcons />
       <div id="my-signIn" />
       <Form isSignIn handleSubmit={handleSubmit}>
-        <InputWithIcon
-          {...loginOptions.login}
-          value={signInValues.login}
-          onChange={handleChangeField}
-        />
-        <InputWithIcon
-          {...loginOptions.password}
-          value={signInValues.password}
-          onChange={handleChangeField}
-        />
+        <InputBase {...loginProps} />
+        <InputBase {...pswProps} />
       </Form>
       <FormFooter isSignIn to="/registration" />
     </LoginLayout>
