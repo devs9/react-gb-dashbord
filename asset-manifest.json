@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/react-gb-dashbord/static/css/main.d52f70dc.chunk.css",
-    "main.js": "/react-gb-dashbord/static/js/main.f377367c.chunk.js",
+    "main.js": "/react-gb-dashbord/static/js/main.235795fc.chunk.js",
     "runtime-main.js": "/react-gb-dashbord/static/js/runtime-main.7c991e7d.js",
     "static/css/2.5e04faac.chunk.css": "/react-gb-dashbord/static/css/2.5e04faac.chunk.css",
     "static/js/2.5a9b17cd.chunk.js": "/react-gb-dashbord/static/js/2.5a9b17cd.chunk.js",
     "index.html": "/react-gb-dashbord/index.html",
-    "precache-manifest.34cc2fc8a1b7ac798f296e794951322a.js": "/react-gb-dashbord/precache-manifest.34cc2fc8a1b7ac798f296e794951322a.js",
+    "precache-manifest.8e355fa43924f44bc1a07458e503100b.js": "/react-gb-dashbord/precache-manifest.8e355fa43924f44bc1a07458e503100b.js",
     "service-worker.js": "/react-gb-dashbord/service-worker.js",
     "static/js/2.5a9b17cd.chunk.js.LICENSE.txt": "/react-gb-dashbord/static/js/2.5a9b17cd.chunk.js.LICENSE.txt"
   },
@@ -15,6 +15,6 @@
     "static/css/2.5e04faac.chunk.css",
     "static/js/2.5a9b17cd.chunk.js",
     "static/css/main.d52f70dc.chunk.css",
-    "static/js/main.f377367c.chunk.js"
+    "static/js/main.235795fc.chunk.js"
   ]
 }
